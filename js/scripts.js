@@ -19,13 +19,27 @@ cardElements.forEach((card) => {
 
 // 4: Select only the first <ul> in the document.
 //    Assign it to a variable named `ul`.
-
+const ul = document.querySelector('ul')
 ul.style.border = '2px solid indigo'
 
 // 5: Select only the second element with the class '.container'.
 //    Assign it to a variable named `container`.
-
+const container = document.querySelectorAll('.container')[1]
 container.style.backgroundColor = 'royalblue'
 
 // 6: Select all <a> elements that have a 'title' attribute.
 //    Set their color value to the color of your choice.
+const linkTitle = document.querySelectorAll('a[title]')
+
+const randomNumber = () => Math.floor(Math.random() * 256)
+
+const randomColorPicker = () => {
+  let r = randomNumber()
+  let g = randomNumber()
+  let b = randomNumber()
+  return `rgb(${r}, ${g}, ${b})`
+}
+
+linkTitle.forEach((link) => {
+  link.style.color = randomColorPicker()
+})
