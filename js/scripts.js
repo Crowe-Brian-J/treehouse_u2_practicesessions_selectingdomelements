@@ -29,7 +29,7 @@ container.style.backgroundColor = 'royalblue'
 
 // 6: Select all <a> elements that have a 'title' attribute.
 //    Set their color value to the color of your choice.
-const linkTitle = document.querySelectorAll('a[title]')
+const linkTitles = document.querySelectorAll('a[title]')
 
 const randomNumber = () => Math.floor(Math.random() * 256)
 
@@ -40,6 +40,6 @@ const randomColorPicker = () => {
   return `rgb(${r}, ${g}, ${b})`
 }
 
-linkTitle.forEach((link) => {
+linkTitles.forEach((link) => {
   link.style.color = randomColorPicker()
 })
